@@ -19,12 +19,21 @@ public class Number {
 		return this;
 	}
 	public boolean isPrime() {
-		for(int count = FIRST_PRIME_NUMBER ; count < value ; count++) {
+		return value == FIRST_PRIME_NUMBER || value > FIRST_PRIME_NUMBER && isOdd() && notFoundDivisors() ;
+	}
+	private boolean isOdd() {
+		return !isEven();
+	}
+	private boolean isEven() {
+		return value % FIRST_PRIME_NUMBER == 0;
+	}
+	private boolean notFoundDivisors() {
+		for(int count = FIRST_PRIME_NUMBER + 1 ; count < value ; count+=2) {
 			if(value % count == 0) {
 				return false;
 			}
 		}
-		return this.value >= FIRST_PRIME_NUMBER;
+		return true;
 	}
 	public boolean isLowerThat(int value) {
 		return this.value < value;
