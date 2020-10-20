@@ -14,7 +14,7 @@ public class Number {
 		this.value += 1;
 		return this;
 	}
-	public Number add(Number newInteger) {
+	public Number sum(Number newInteger) {
 		this.value += newInteger.value;
 		return this;
 	}
