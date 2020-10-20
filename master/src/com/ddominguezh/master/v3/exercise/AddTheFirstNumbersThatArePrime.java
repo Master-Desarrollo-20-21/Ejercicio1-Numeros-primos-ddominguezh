@@ -14,9 +14,9 @@ public class AddTheFirstNumbersThatArePrime {
 		while (count < max) {
 			if(number.isPrime()) {
 				count++;
-				total.add(number);
+				total.sum(number);
 			}
-			number.add();
+			number.sum();
 		}
 		total.println();
 	}
