@@ -9,9 +9,9 @@ public class AddFirstPrimeNumbers {
 	public static void main(String[] args) {
 		int max = args.length > 0 ? Integer.valueOf(args[0]).intValue() : LIMIT;
 		Number total = new Number();
-		for (Number number = new Number(); number.isLowerThat(max) ; number.add()) {
+		for (Number number = new Number(); number.isLowerThat(max) ; number.sum()) {
 			if(number.isPrime()) {
-				total.add(number);
+				total.sum(number);
 			}
 		}
 		total.println();
