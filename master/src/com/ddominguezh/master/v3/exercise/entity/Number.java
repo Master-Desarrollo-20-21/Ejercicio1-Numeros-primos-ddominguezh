@@ -10,7 +10,7 @@ public class Number {
 	public Number(int value) {
 		this.value = value;
 	}
-	public Number add() {
+	public Number sum() {
 		this.value += 1;
 		return this;
 	}
