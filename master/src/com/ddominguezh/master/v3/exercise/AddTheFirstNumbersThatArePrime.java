@@ -16,7 +16,7 @@ public class AddTheFirstNumbersThatArePrime {
 				count++;
 				total.sum(number);
 			}
-			number.sum();
+			number.next();
 		}
 		total.println();
 	}
