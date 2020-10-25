@@ -10,13 +10,11 @@ public class AddTheFirstNumbersThatArePrime {
 		int max = args.length > 0 ? Integer.valueOf(args[0]).intValue() : LIMIT;
 		int count = 0;
 		Number total = new Number();
-		Number number = new Number();
-		while (count < max) {
+		for(Number number = new Number() ; count < max ; number.next() ){
 			if(number.isPrime()) {
 				count++;
 				total.sum(number);
 			}
-			number.next();
 		}
 		total.println();
 	}
